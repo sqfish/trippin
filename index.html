@@ -5,7 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trippin</title>
+  <link rel="stylesheet" href="lib/node_modules/normalize.css/normalize.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/lumen/bootstrap.min.css">
+
   <link rel="stylesheet" href="styles/main.css" type="text/css">
 </head>
 
@@ -20,13 +24,49 @@
     <div class="row">
 
       <div class="col-md-9">
-        <div id="family-container" class="row">
+        <div id="trip-container" class="js-packery row" data-packery-options='{ "itemSelector": ".tripItem", "gutter": 10 }'>
       
         </div>
       </div>
       <div id="form-container" class="col-md-2">
+        <form id="addLocationForm">
+          <div class="form-group">
+            <label for="inputLocation">Location name:</label>
+            <input type="text" class="form-control" id="inputLocation" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="locationType">Location type:</label>
+            <select class="form-control" id="locationType">
+            </select>
+          </div>
+          <div class="form-group">
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-default" id="wishlist" value="wishlist">Wishlist</button>
+              <button type="button" class="btn btn-default" id="visited" value="visited">Visited</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputDate">Date:</label>
+            <input type="data" class="form-control" id="inputDate">
+          </div>
+          <div class="form-group">
+            <label for="inputTitle">Title:</label>
+            <input type="text" class="form-control" id="inputTitle" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="inputReview">Review:</label>
+            <textarea class="form-control" id="inputReview" rows="2" placeholder=""></textarea>
+          </div>
 
+          <button type="button" id="addLocation" class="btn btn-default">Add</button>
+        </form>
       </div>
+    </div>
+    <div>
+      <form>
+        <textarea class="reviewEntry"></textarea>
+        <button type="button" id="addNewReview">Add</button>
+      </form>
     </div>
   </div>
 

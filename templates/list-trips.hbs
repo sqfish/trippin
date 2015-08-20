@@ -1,0 +1,15 @@
+{{#each this}}
+<div class="tripItem col-md-3">
+  <div>
+    <h3 class="text-center">
+      {{location}}
+    </h3>
+  </div>
+  <div>
+    {{#each reviews}}
+      <span>{{title}}</span> | <span>{{date}}</span>
+    {{/each}}
+  </div>
+  <button id="addReview" data-key="{{@key}}">Add Review</button>
+</div>
+{{/each}}
